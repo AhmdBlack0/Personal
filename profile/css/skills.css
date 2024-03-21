@@ -1,0 +1,133 @@
+:root {
+  --main-color: #4070f4;
+}
+::selection {
+  background-color: var(--main-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  margin: 30px;
+  color: black;
+  font-weight: bold;
+  transition: .3s;
+}
+header .logo a {
+  margin: 0;
+}
+.parent header .nav a:nth-child(3) {
+  color: var(--main-color);
+}
+
+.parent header .nav a:hover {
+  color: var(--main-color);
+}
+
+
+.skills {
+  max-width: 600px;
+  margin: auto;
+}
+.skill {
+  margin-bottom: 20px;
+}
+.skill-name {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.skill-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.skill-level {
+  height: 20px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 5px;
+  color: white;
+  font-weight: bold;
+}
+.skill-level-HTML {
+  width: 90%;
+  animation: fillSkillHTML 2s ease-out;
+}
+.skill-level-CSS {
+  width: 85%;
+  animation: fillSkillCSS 2s ease-out;
+}
+.skill-level-JS {
+  width: 75%;
+  animation: fillSkillJS 2s ease-out;
+}
+
+/* Animation */
+@keyframes fillSkillHTML {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes fillSkillCSS {
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
+  }
+}
+@keyframes fillSkillJS {
+  from {
+    width: 0;
+  }
+  to {
+    width: 75%;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav a {
+    margin: 5px;
+  }
+  .skills {
+    width: 90%;
+    margin: auto;
+  }
+}
