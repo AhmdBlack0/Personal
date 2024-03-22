@@ -57,6 +57,7 @@ header .logo a {
 }
 .skill {
   margin-bottom: 20px;
+  position: relative;
 }
 .skill-name {
   font-size: 20px;
@@ -79,6 +80,28 @@ header .logo a {
   color: white;
   font-weight: bold;
 }
+#btn {
+  position: absolute;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+}
+#summary {
+  display: none;
+  margin: 20px 0 30px;
+  font-size: 20px;
+}
+.download {
+  margin: 0;
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
 .skill-level-HTML {
   width: 90%;
   animation: fillSkillHTML 2s ease-out;
@@ -90,6 +113,10 @@ header .logo a {
 .skill-level-JS {
   width: 75%;
   animation: fillSkillJS 2s ease-out;
+}
+.skill-level-SQL {
+  width: 65%;
+  animation: fillSkillSQL 2s ease-out;
 }
 
 /* Animation */
@@ -117,6 +144,16 @@ header .logo a {
     width: 75%;
   }
 }
+@keyframes fillSkillSQL {
+  from {
+    width: 0;
+  }
+  to {
+    width: 65%;
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   header {
     display: flex;
