@@ -1,6 +1,6 @@
 
 :root {
-  --main-color: red;
+  --main-color: green;
 }
 ::selection {
   background-color: var(--main-color);
